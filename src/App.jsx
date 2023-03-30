@@ -1,12 +1,14 @@
-import { useState } from "react";
 import styles from "./App.module.css";
 
 function App() {
   return (
     <main className="App">
       <header>
-        <h1>Hi!</h1>
-        <div className={styles.notificationsNum}>3</div>
+        <div className={styles.flex}>
+          <h1>Notifiactions</h1>
+          <span className={styles.notificationsNum}>3</span>
+        </div>
+        <p>Mark all as read</p>
       </header>
     </main>
   );

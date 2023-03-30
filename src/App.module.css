@@ -1,9 +1,33 @@
 @import "./vars.css";
 
+main {
+  box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.1);
+  padding: 38px 30px 0 30px;
+  border-radius: 16px;
+  width: 730px;
+  height: 840px;
+  background-color: white;
+}
+
 h1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 .notificationsNum {
-  background-color: var(--dark-grayish-blue);
+  margin-left: 8px;
+  padding: 6px 16px;
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--blue);
 }

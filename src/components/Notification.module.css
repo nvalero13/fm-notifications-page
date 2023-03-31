@@ -1,0 +1,60 @@
+@import "../vars.css";
+
+article {
+  padding: 18px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--light-grayish-blue-1);
+  display: flex;
+  gap: 18px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+p {
+  font-size: 16px;
+  margin: 2px;
+}
+
+.strong {
+  font-weight: bold;
+  color: black;
+}
+
+.strong:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.normal-text {
+  margin: 2px 4px;
+  color: var(--dark-grayish-blue);
+}
+
+.content-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* 
+.content-text {
+
+} */
+
+.content-time {
+  color: var(--grayish-blue);
+}
+
+.red-dot {
+  margin-top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--red);
+}

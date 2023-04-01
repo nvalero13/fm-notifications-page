@@ -1,45 +1,29 @@
 import styles from "./App.module.css";
+import useNotifications from "./hooks/useNotifications";
 
 import Notification from "./components/Notification";
 
-const notifications = [
-  {
-    id: 0,
-    user: {
-      avatar: "markImg",
-      nickname: "Mark Webber",
-    },
-    time: "3m ago",
-    message: "reacted to your recent post",
-    link: "My first tournament today!",
-    seen: false,
-  },
-  {
-    id: 1,
-    user: {
-      avatar: "angelaImg",
-      nickname: "Angela Gray",
-    },
-    time: "5m ago",
-    message: "followed you",
-    seen: true,
-  },
-];
-
 function App() {
+  const [notis, markAllAsRead] = useNotifications();
+
   return (
     <main className="App">
       <header>
         <div className={styles.flex}>
           <h1>Notifications</h1>
           <span className={styles["notifications-num"]}>
-            {notifications.filter((noti) => noti.seen === false).length}
+            {notis.filter((noti) => noti.unread).length}
           </span>
         </div>
-        <button className={styles["mark-all-button"]}>Mark all as read</button>
+        <button
+          onClick={() => markAllAsRead()}
+          className={styles["mark-all-button"]}
+        >
+          Mark all as read
+        </button>
       </header>
       <section>
-        {notifications.map((notification, index) => {
+        {notis.map((notification, index) => {
           return <Notification key={index} notification={notification} />;
         })}
       </section>
